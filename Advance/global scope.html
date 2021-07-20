@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //A global scope variable has global scope means all scripts and functions on a web page can access it
+
+        var Name="Michel";
+
+        getName();
+
+        //Here, getName using "Name" variable is declared in global scope
+        function getName()
+        {
+            document.write("My name is " + Name)
+        }
+    </script>
+</body>
+</html>

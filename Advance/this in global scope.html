@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <Script>
+        var firstName = "Harry",
+        lastName = "Edison";
+
+        function showFullName()
+        {
+            //"This" inside this function will have the value of the window object
+
+            document.write(this.firstName+ " "+this.lastName+" ");
+        }
+
+        var person =
+        {
+            firstName : "Mary",
+            lastName : "Thomas",
+
+            showFullName : function()
+            {
+                //"this" on the line below refers to the persin object, because
+                //the showFullName function will be invoked by person object
+                document.write(this.firstName+" "+this.lastName+" ");
+
+            }
+        }
+showFullName(); //Harry Edison 
+window.showFullName(); //Harry Edison
+person.showFullName(); //Mary Thomas
+
+
+
+    </Script>
+</body>
+</html>

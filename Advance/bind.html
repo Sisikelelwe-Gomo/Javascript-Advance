@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*If we assign a method tat uses "this" to a variable, then "this" will have value of the
+        global data array, and not the data array of the user object
+        */
+       //Solution is bind() method
+
+       //Example showing binding some parameter
+
+       var sum = function(a,b)
+       {
+           return a + b
+       }
+       var add5 = sum.bind(null,5)
+       document.write(add5(10));
+    </script>
+</body>
+</html>

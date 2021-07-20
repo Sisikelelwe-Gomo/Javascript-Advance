@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //calls (executes) a function and sets its this to the provided value, argument can be passed as they are.
+
+        var firstname=
+        {
+            name:"Thomas",
+            sayHello:function(name)
+            {
+                document.write(name+""+this.name);
+            }
+        }
+
+        var lastName=
+        {
+            name:"Edison"
+        }
+        firstname.sayHello.call(lastName,"Thomas");
+
+        //call ([thisObj, [arg1[,arg2, [, argN]]]])
+        
+        //thisObj [Optional] : The object to be used as the current object
+
+        //arg1, arg2, argN : Optional. A list of arguments to be passed to the method
+    </script>
+</body>
+</html>
